@@ -1,3 +1,5 @@
+crete database parcialIV;
+
 CREATE TABLE `usuarios` (
   `id_usuario` bigint PRIMARY KEY AUTO_INCREMENT,
   `nombre_usuario` varchar(50) UNIQUE NOT NULL,
