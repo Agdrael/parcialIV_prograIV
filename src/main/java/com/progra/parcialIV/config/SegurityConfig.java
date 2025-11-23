@@ -32,21 +32,16 @@ public class SegurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        // vistas públicas
                         .requestMatchers("/login", "/css/**", "/js/**").permitAll()
-
-                        // vistas protegidas
                         .requestMatchers("/home").authenticated()
                         .requestMatchers("/admin").hasRole("ADMIN")
-
-                        // cualquier otra petición debe estar autenticada
                         .anyRequest().authenticated()
                 )
 
                 // configuración del login
                 .formLogin(form -> form
-                        .loginPage("/login")             // tu vista login.html
-                        .defaultSuccessUrl("/home", true) // después de loguearse
+                        .loginPage("/login")            
+                        .defaultSuccessUrl("/home", true) 
                         .permitAll()
                 )
 
