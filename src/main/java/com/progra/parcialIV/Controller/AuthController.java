@@ -18,8 +18,8 @@ public class AuthController {
         return "home";
     }
 
-    @GetMapping("/perfil")
-    public String perfil() {
-        return "perfil";
+    @GetMapping("/Admin")
+    public String admin() {
+        return "admin";
     }
 }
