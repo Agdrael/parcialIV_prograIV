@@ -2,10 +2,8 @@ package com.progra.parcialIV.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/Auth")
 public class AuthController {
 
     @GetMapping("/login")
@@ -18,7 +16,7 @@ public class AuthController {
         return "home";
     }
 
-    @GetMapping("/Admin")
+    @GetMapping("/admin")
     public String admin() {
         return "admin";
     }
